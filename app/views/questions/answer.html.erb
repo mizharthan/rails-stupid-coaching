@@ -1,0 +1,9 @@
+<h1>Your question: <%=@question%></h1>
+<p>DEBUG: Your input is '<%= @question.inspect %>'</p>
+<% if @question == "I am going to work" %>
+  <p>Great!</p>
+<% elsif @question.to_s.ends_with?("?") %>
+  <p>Silly question, get dressed and go to work!</p>
+<% else %>
+  <p>I don't care, get dressed and go to work!</p>
+<% end %>
